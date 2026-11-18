@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My dashboard — Shikhon Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="../index.html" class="brand"><span class="brand-mark"><i data-i="cap"></i></span>Shikhon Academy</a>
+      <div class="side-label">My learning</div>
+      <a class="side-link is-active" href="dashboard.html" aria-current="page"><i data-i="grid"></i>Dashboard</a>
+      <a class="side-link" href="#courses"><i data-i="book"></i>My courses</a>
+      <a class="side-link" href="#schedule"><i data-i="calendar"></i>Schedule</a>
+      <a class="side-link" href="#attendance"><i data-i="checksq"></i>Attendance</a>
+      <a class="side-link" href="#results"><i data-i="award"></i>Results</a>
+      <a class="side-link" href="#payments"><i data-i="card"></i>Payments <span class="count">1</span></a>
+      <div class="side-label">Explore</div>
+      <a class="side-link" href="../courses.html"><i data-i="search"></i>Browse courses</a>
+      <div class="side-foot">
+        <div class="side-user">
+          <span class="avatar av1">RA</span>
+          <div><strong>Rafiq Ahmed</strong><span>SA-2601</span></div>
+        </div>
+        <a class="side-link" href="../login.html"><i data-i="logout"></i>Log out</a>
+      </div>
+    </aside>
+    <div class="overlay" data-sidebar-close></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Open menu"><i data-i="menu"></i></button>
+        <div class="spacer"></div>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme"></button>
+        <button class="icon-btn notif" type="button" data-toast="Model test on Friday, 10 AM (demo notice)" aria-label="Notifications"><i data-i="bell"></i></button>
+        <span class="avatar av1" aria-hidden="true">RA</span>
+      </header>
+
+      <main class="content">
+        <section class="welcome">
+          <div>
+            <h2>Welcome back, Rafiq</h2>
+            <p>Next class: HSC Physics today at 4:00 PM · Room 3</p>
+          </div>
+          <button class="btn btn-lg" type="button" data-toast="Online class links will appear here once classes are connected"><i data-i="video"></i> Join online class</button>
+        </section>
+
+        <section class="kpis" aria-label="Your summary">
+          <article class="card kpi">
+            <div class="kpi-top"><span class="ico ico-success"><i data-i="checksq"></i></span></div>
+            <div><strong data-count="94" data-suffix="%">94%</strong><span class="label">Attendance</span></div>
+          </article>
+          <article class="card kpi">
+            <div class="kpi-top"><span class="ico ico-primary"><i data-i="book"></i></span></div>
+            <div><strong data-count="2">2</strong><span class="label">Courses enrolled</span></div>
+          </article>
+          <article class="card kpi">
+            <div class="kpi-top"><span class="ico ico-warn"><i data-i="award"></i></span><span class="delta up">+6%</span></div>
+            <div><strong data-count="82" data-suffix="%">82%</strong><span class="label">Average score</span></div>
+          </article>
+          <article class="card kpi">
+            <div class="kpi-top"><span class="ico ico-danger"><i data-i="card"></i></span></div>
+            <div><strong data-count="3500" data-prefix="৳">৳3,500</strong><span class="label">Fee due this month</span></div>
+          </article>
+        </section>
+
+        <div class="cols cols-2-1">
+          <section class="panel" id="courses" aria-labelledby="myCoursesTitle">
+            <div class="panel-head">
+              <div><h2 id="myCoursesTitle">My courses</h2><p>Your progress this session</p></div>
+              <a class="btn btn-soft btn-sm" href="../courses.html">Add course</a>
+            </div>
+            <div class="course-row">
+              <div class="top"><strong>HSC Physics (1st &amp; 2nd paper)</strong><span class="badge badge-success">Active</span></div>
+              <div class="progress" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="HSC Physics progress"><span style="--v:68%"></span></div>
+              <p class="hint">68% of syllabus covered · Dr. Farhana Rahman</p>
+            </div>
+            <div class="course-row">
+              <div class="top"><strong>Spoken English Foundation</strong><span class="badge badge-success">Active</span></div>
+              <div class="progress" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Spoken English progress"><span style="--v:45%"></span></div>
+              <p class="hint">45% of syllabus covered · Nusrat Jahan</p>
+            </div>
+          </section>
+
+          <section class="panel" id="attendance" aria-labelledby="myAttTitle">
+            <div class="panel-head"><div><h2 id="myAttTitle">My attendance</h2><p>November</p></div></div>
+            <div class="donut" style="--p:94" role="img" aria-label="94 percent attendance"><div><strong>94%</strong><span>Present</span></div></div>
+            <div style="display:flex; justify-content:space-around; margin-top:22px; text-align:center">
+              <div><strong style="font-size:1.2rem">17</strong><br><span class="muted" style="font-size:.8rem">Present</span></div>
+              <div><strong style="font-size:1.2rem">1</strong><br><span class="muted" style="font-size:.8rem">Absent</span></div>
+              <div><strong style="font-size:1.2rem">1</strong><br><span class="muted" style="font-size:.8rem">Late</span></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="cols cols-2-1">
+          <section class="panel" id="schedule" aria-labelledby="myClassesTitle">
+            <div class="panel-head"><div><h2 id="myClassesTitle">This week's classes</h2><p>Your upcoming sessions</p></div></div>
+            <div>
+              <div class="list-item"><span class="time">Today<br>4:00 PM</span><div><strong>HSC Physics</strong><span class="sub">Room 3 · Dr. Farhana Rahman</span></div><span class="badge badge-info end">Upcoming</span></div>
+              <div class="list-item"><span class="time">Sat<br>8:00 AM</span><div><strong>HSC Physics</strong><span class="sub">Room 3 · Dr. Farhana Rahman</span></div></div>
+              <div class="list-item"><span class="time">Sat<br>12:00 PM</span><div><strong>Spoken English</strong><span class="sub">Room 2 · Nusrat Jahan</span></div></div>
+              <div class="list-item"><span class="time">Mon<br>8:00 AM</span><div><strong>HSC Physics</strong><span class="sub">Room 3 · Dr. Farhana Rahman</span></div></div>
+            </div>
+          </section>
+
+          <section class="panel" id="payments" aria-labelledby="payTitle">
+            <div class="panel-head"><div><h2 id="payTitle">Fees</h2><p>November 2026</p></div></div>
+            <div class="due-box">
+              <strong>৳3,500</strong>
+              <p>Due by 25 November</p>
+              <button class="btn btn-primary btn-block" type="button" data-toast="Online payment will open here once the payment gateway is connected"><i data-i="card"></i> Pay now</button>
+            </div>
+            <div class="mt-16">
+              <div class="list-item"><div><strong>October fee</strong><span class="sub">Paid 5 Oct</span></div><span class="badge badge-success end">৳3,500</span></div>
+              <div class="list-item"><div><strong>September fee</strong><span class="sub">Paid 3 Sep</span></div><span class="badge badge-success end">৳3,500</span></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel" id="results" aria-labelledby="resultsTitle">
+          <div class="panel-head"><div><h2 id="resultsTitle">Recent results</h2><p>Your latest tests</p></div></div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Exam</th><th>Subject</th><th>Marks</th><th>Grade</th><th>Date</th></tr></thead>
+              <tbody>
+                <tr><td>Weekly test 11</td><td>Physics</td><td>41 / 50</td><td><span class="badge badge-success">A</span></td><td>14 Nov</td></tr>
+                <tr><td>Chapter test</td><td>Physics</td><td>36 / 50</td><td><span class="badge badge-info">B+</span></td><td>07 Nov</td></tr>
+                <tr><td>Speaking assessment</td><td>English</td><td>18 / 25</td><td><span class="badge badge-success">A-</span></td><td>02 Nov</td></tr>
+                <tr><td>Weekly test 10</td><td>Physics</td><td>44 / 50</td><td><span class="badge badge-success">A+</span></td><td>31 Oct</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

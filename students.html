@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students — Shikhon Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="../index.html" class="brand"><span class="brand-mark"><i data-i="cap"></i></span>Shikhon Academy</a>
+      <div class="side-label">Manage</div>
+      <a class="side-link" href="dashboard.html"><i data-i="grid"></i>Dashboard</a>
+      <a class="side-link is-active" href="students.html" aria-current="page"><i data-i="users"></i>Students</a>
+      <a class="side-link" href="attendance.html"><i data-i="checksq"></i>Attendance</a>
+      <a class="side-link" href="schedule.html"><i data-i="calendar"></i>Class schedule</a>
+      <div class="side-label">Shortcuts</div>
+      <a class="side-link" href="../courses.html"><i data-i="book"></i>Public courses</a>
+      <a class="side-link" href="../student/dashboard.html"><i data-i="cap"></i>Student view</a>
+      <div class="side-foot">
+        <div class="side-user">
+          <span class="avatar av1">AD</span>
+          <div><strong>Admin</strong><span>Administrator</span></div>
+        </div>
+        <a class="side-link" href="../login.html"><i data-i="logout"></i>Log out</a>
+      </div>
+    </aside>
+    <div class="overlay" data-sidebar-close></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Open menu"><i data-i="menu"></i></button>
+        <div class="spacer"></div>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme"></button>
+        <button class="icon-btn notif" type="button" data-toast="You have 3 new notices (demo)" aria-label="Notifications"><i data-i="bell"></i></button>
+        <span class="avatar av1" aria-hidden="true">AD</span>
+      </header>
+
+      <main class="content" data-filter-scope>
+        <div class="page-title">
+          <div>
+            <h1>Students</h1>
+            <p><strong data-result-count>8</strong> students shown</p>
+          </div>
+          <div class="actions">
+            <button class="btn btn-ghost" type="button" data-toast="Export will work once the backend is connected"><i data-i="download"></i> Export</button>
+            <button class="btn btn-primary" type="button" data-open-dialog="addStudent"><i data-i="plus"></i> Add student</button>
+          </div>
+        </div>
+
+        <section class="panel">
+          <div class="filters">
+            <div class="input-wrap">
+              <i data-i="search" class="ic-left"></i>
+              <label class="sr-only" for="studentSearch">Search students</label>
+              <input id="studentSearch" class="input has-icon" type="search" placeholder="Search by name, ID, course or phone" data-filter-search autocomplete="off">
+            </div>
+            <label class="sr-only" for="feeFilter">Filter by fee status</label>
+            <select id="feeFilter" class="input" data-filter-select="fees">
+              <option value="all">All fee status</option>
+              <option value="paid">Paid</option>
+              <option value="partial">Partial</option>
+              <option value="due">Due</option>
+            </select>
+            <label class="sr-only" for="batchFilter">Filter by batch</label>
+            <select id="batchFilter" class="input" data-filter-select="batch">
+              <option value="all">All batches</option>
+              <option value="morning">Morning</option>
+              <option value="evening">Evening</option>
+            </select>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>Student</th><th>Course &amp; batch</th><th>Mobile</th><th>Fees</th><th>Attendance</th></tr></thead>
+              <tbody id="studentRows">
+                <tr data-item data-batch="morning" data-fees="paid"><td><div class="cell-user"><span class="avatar av1">RA</span><div><strong>Rafiq Ahmed</strong><span>SA-2601</span></div></div></td><td>HSC Physics · Morning</td><td>01711223344</td><td><span class="badge badge-success">Paid</span></td><td>94%</td></tr>
+                <tr data-item data-batch="evening" data-fees="due"><td><div class="cell-user"><span class="avatar av2">SA</span><div><strong>Sumaiya Akter</strong><span>SA-2602</span></div></div></td><td>SSC Math · Evening</td><td>01819556677</td><td><span class="badge badge-danger">Due</span></td><td>88%</td></tr>
+                <tr data-item data-batch="morning" data-fees="partial"><td><div class="cell-user"><span class="avatar av3">TH</span><div><strong>Tanjim Hossain</strong><span>SA-2603</span></div></div></td><td>Engineering Admission · Morning</td><td>01912334455</td><td><span class="badge badge-warn">Partial</span></td><td>91%</td></tr>
+                <tr data-item data-batch="evening" data-fees="paid"><td><div class="cell-user"><span class="avatar av4">MC</span><div><strong>Mim Chowdhury</strong><span>SA-2604</span></div></div></td><td>Spoken English · Evening</td><td>01615778899</td><td><span class="badge badge-success">Paid</span></td><td>97%</td></tr>
+                <tr data-item data-batch="evening" data-fees="due"><td><div class="cell-user"><span class="avatar av5">IK</span><div><strong>Imran Khan</strong><span>SA-2605</span></div></div></td><td>HSC Physics · Evening</td><td>01311990011</td><td><span class="badge badge-danger">Due</span></td><td>76%</td></tr>
+                <tr data-item data-batch="morning" data-fees="paid"><td><div class="cell-user"><span class="avatar av1">NI</span><div><strong>Nabila Islam</strong><span>SA-2606</span></div></div></td><td>IELTS Preparation · Morning</td><td>01512445566</td><td><span class="badge badge-success">Paid</span></td><td>99%</td></tr>
+                <tr data-item data-batch="evening" data-fees="partial"><td><div class="cell-user"><span class="avatar av2">AH</span><div><strong>Arif Hasan</strong><span>SA-2607</span></div></div></td><td>ICT &amp; Programming · Evening</td><td>01717889900</td><td><span class="badge badge-warn">Partial</span></td><td>82%</td></tr>
+                <tr data-item data-batch="morning" data-fees="paid"><td><div class="cell-user"><span class="avatar av3">TR</span><div><strong>Tasnia Rahman</strong><span>SA-2608</span></div></div></td><td>SSC Math · Morning</td><td>01818112233</td><td><span class="badge badge-success">Paid</span></td><td>93%</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="empty">
+            <i data-i="users"></i>
+            <h3>No students found</h3>
+            <p>Try a different search or clear the filters.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Add student dialog -->
+  <dialog id="addStudent" aria-labelledby="addTitle">
+    <div class="dialog-head">
+      <h3 id="addTitle">Add new student</h3>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="Close"><i data-i="x"></i></button>
+    </div>
+    <form id="addStudentForm" data-validate>
+      <div class="dialog-body">
+        <div class="field">
+          <label for="st-name">Full name</label>
+          <input class="input" id="st-name" name="name" type="text" placeholder="e.g. Rafiq Ahmed" minlength="3" required>
+          <p class="msg"></p>
+        </div>
+        <div class="field">
+          <label for="st-phone">Mobile number</label>
+          <input class="input" id="st-phone" name="phone" type="tel" placeholder="01712345678" pattern="01[3-9][0-9]{8}" title="Enter an 11-digit mobile number, e.g. 01712345678" required>
+          <p class="msg"></p>
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label for="st-course">Course</label>
+            <select class="input" id="st-course" name="course" required>
+              <option value="">Select</option>
+              <option>HSC Physics</option>
+              <option>SSC Math</option>
+              <option>Engineering Admission</option>
+              <option>Spoken English</option>
+              <option>IELTS Preparation</option>
+              <option>ICT &amp; Programming</option>
+            </select>
+            <p class="msg"></p>
+          </div>
+          <div class="field">
+            <label for="st-batch">Batch</label>
+            <select class="input" id="st-batch" name="batch" required>
+              <option value="">Select</option>
+              <option>Morning</option>
+              <option>Evening</option>
+            </select>
+            <p class="msg"></p>
+          </div>
+        </div>
+      </div>
+      <div class="dialog-foot">
+        <button class="btn btn-ghost" type="button" data-close-dialog>Cancel</button>
+        <button class="btn btn-primary" type="submit">Add student</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

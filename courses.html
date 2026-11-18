@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses — Shikhon Academy</title>
+  <meta name="description" content="Browse SSC, HSC, admission, language and skills courses at Shikhon Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="brand-mark"><i data-i="cap"></i></span>Shikhon Academy</a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="courses.html" class="is-active" aria-current="page">Courses</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#teachers">Teachers</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="login.html" class="nav-login">Log in</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme"></button>
+        <a href="login.html" class="btn btn-ghost">Log in</a>
+        <a href="login.html#register" class="btn btn-primary">Enroll now</a>
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><i data-i="menu"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>Find your course</h1>
+        <p>Choose a level, search by subject or teacher, and enroll in a few clicks.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:44px" data-filter-scope>
+      <div class="container">
+        <div class="toolbar">
+          <div class="chips" role="group" aria-label="Filter by category">
+            <button type="button" class="chip is-active" data-filter-chip="cat" data-value="all" aria-pressed="true">All</button>
+            <button type="button" class="chip" data-filter-chip="cat" data-value="ssc" aria-pressed="false">SSC</button>
+            <button type="button" class="chip" data-filter-chip="cat" data-value="hsc" aria-pressed="false">HSC</button>
+            <button type="button" class="chip" data-filter-chip="cat" data-value="admission" aria-pressed="false">Admission</button>
+            <button type="button" class="chip" data-filter-chip="cat" data-value="language" aria-pressed="false">Language</button>
+            <button type="button" class="chip" data-filter-chip="cat" data-value="skills" aria-pressed="false">Skills</button>
+          </div>
+          <div class="input-wrap">
+            <i data-i="search" class="ic-left"></i>
+            <label class="sr-only" for="courseSearch">Search courses</label>
+            <input id="courseSearch" class="input has-icon" type="search" placeholder="Search course or teacher" data-filter-search autocomplete="off">
+          </div>
+        </div>
+
+        <p class="muted" style="margin-bottom:18px"><strong data-result-count>6</strong> courses found</p>
+
+        <div class="grid-3">
+          <article class="course-card" data-item data-cat="hsc">
+            <div class="course-cover cv1"><i data-i="book" class="ic-big"></i><span class="course-tag">HSC</span></div>
+            <div class="course-body">
+              <h3>HSC Physics (1st &amp; 2nd paper)</h3>
+              <div class="course-meta"><span><i data-i="clock"></i> 6 months</span><span><i data-i="calendar"></i> 3 days / week</span><span class="rating"><i data-i="star"></i> 4.9</span></div>
+              <div class="course-teacher"><span class="avatar av1">FR</span> Dr. Farhana Rahman</div>
+              <div class="course-foot"><div class="price">৳3,500 <small>/ month</small></div><a href="login.html#register" class="btn btn-soft btn-sm">Enroll</a></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-item data-cat="ssc">
+            <div class="course-cover cv2"><i data-i="trend" class="ic-big"></i><span class="course-tag">SSC</span></div>
+            <div class="course-body">
+              <h3>SSC General Math</h3>
+              <div class="course-meta"><span><i data-i="clock"></i> 5 months</span><span><i data-i="calendar"></i> 3 days / week</span><span class="rating"><i data-i="star"></i> 4.8</span></div>
+              <div class="course-teacher"><span class="avatar av2">TA</span> Tanvir Ahmed</div>
+              <div class="course-foot"><div class="price">৳2,800 <small>/ month</small></div><a href="login.html#register" class="btn btn-soft btn-sm">Enroll</a></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-item data-cat="admission">
+            <div class="course-cover cv3"><i data-i="award" class="ic-big"></i><span class="course-tag">Admission</span></div>
+            <div class="course-body">
+              <h3>Engineering Admission Program</h3>
+              <div class="course-meta"><span><i data-i="clock"></i> 8 months</span><span><i data-i="calendar"></i> 5 days / week</span><span class="rating"><i data-i="star"></i> 4.9</span></div>
+              <div class="course-teacher"><span class="avatar av3">TA</span> Tanvir Ahmed &amp; team</div>
+              <div class="course-foot"><div class="price">৳6,000 <small>/ month</small></div><a href="login.html#register" class="btn btn-soft btn-sm">Enroll</a></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-item data-cat="language">
+            <div class="course-cover cv4"><i data-i="msg" class="ic-big"></i><span class="course-tag">Language</span></div>
+            <div class="course-body">
+              <h3>Spoken English Foundation</h3>
+              <div class="course-meta"><span><i data-i="clock"></i> 3 months</span><span><i data-i="calendar"></i> 2 days / week</span><span class="rating"><i data-i="star"></i> 4.7</span></div>
+              <div class="course-teacher"><span class="avatar av4">NJ</span> Nusrat Jahan</div>
+              <div class="course-foot"><div class="price">৳2,200 <small>/ month</small></div><a href="login.html#register" class="btn btn-soft btn-sm">Enroll</a></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-item data-cat="language">
+            <div class="course-cover cv5"><i data-i="award" class="ic-big"></i><span class="course-tag">Language</span></div>
+            <div class="course-body">
+              <h3>IELTS Preparation</h3>
+              <div class="course-meta"><span><i data-i="clock"></i> 3 months</span><span><i data-i="calendar"></i> 4 days / week</span><span class="rating"><i data-i="star"></i> 4.9</span></div>
+              <div class="course-teacher"><span class="avatar av5">NJ</span> Nusrat Jahan</div>
+              <div class="course-foot"><div class="price">৳5,500 <small>/ month</small></div><a href="login.html#register" class="btn btn-soft btn-sm">Enroll</a></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-item data-cat="skills">
+            <div class="course-cover cv6"><i data-i="grid" class="ic-big"></i><span class="course-tag">Skills</span></div>
+            <div class="course-body">
+              <h3>ICT &amp; Programming Basics</h3>
+              <div class="course-meta"><span><i data-i="clock"></i> 4 months</span><span><i data-i="calendar"></i> 2 days / week</span><span class="rating"><i data-i="star"></i> 4.8</span></div>
+              <div class="course-teacher"><span class="avatar av1">MH</span> Mahmudul Hasan</div>
+              <div class="course-foot"><div class="price">৳3,000 <small>/ month</small></div><a href="login.html#register" class="btn btn-soft btn-sm">Enroll</a></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty card">
+          <i data-i="search"></i>
+          <h3>No courses match your search</h3>
+          <p>Try a different keyword or pick another category.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand"><span class="brand-mark"><i data-i="cap"></i></span>Shikhon Academy</a>
+          <p class="muted mt-16" style="max-width:300px">A modern coaching center for SSC, HSC and admission preparation.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="courses.html">All courses</a></li>
+            <li><a href="index.html#teachers">Teachers</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Portal</h4>
+          <ul>
+            <li><a href="login.html">Student login</a></li>
+            <li><a href="login.html#register">Create account</a></li>
+            <li><a href="admin/dashboard.html">Admin demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><i data-i="pin"></i>House 00, Road 00, Dhaka</li>
+            <li><i data-i="phone"></i>+880 1700-000000</li>
+            <li><i data-i="mail"></i>hello@shikhon.example</li>
+            <li><i data-i="clock"></i>Sat – Thu, 8 AM – 9 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Shikhon Academy. All rights reserved.</span>
+        <span>Sample content — replace with your real details.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

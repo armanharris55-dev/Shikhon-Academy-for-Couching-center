@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance — Shikhon Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="../index.html" class="brand"><span class="brand-mark"><i data-i="cap"></i></span>Shikhon Academy</a>
+      <div class="side-label">Manage</div>
+      <a class="side-link" href="dashboard.html"><i data-i="grid"></i>Dashboard</a>
+      <a class="side-link" href="students.html"><i data-i="users"></i>Students</a>
+      <a class="side-link is-active" href="attendance.html" aria-current="page"><i data-i="checksq"></i>Attendance</a>
+      <a class="side-link" href="schedule.html"><i data-i="calendar"></i>Class schedule</a>
+      <div class="side-label">Shortcuts</div>
+      <a class="side-link" href="../courses.html"><i data-i="book"></i>Public courses</a>
+      <a class="side-link" href="../student/dashboard.html"><i data-i="cap"></i>Student view</a>
+      <div class="side-foot">
+        <div class="side-user">
+          <span class="avatar av1">AD</span>
+          <div><strong>Admin</strong><span>Administrator</span></div>
+        </div>
+        <a class="side-link" href="../login.html"><i data-i="logout"></i>Log out</a>
+      </div>
+    </aside>
+    <div class="overlay" data-sidebar-close></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Open menu"><i data-i="menu"></i></button>
+        <div class="spacer"></div>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme"></button>
+        <button class="icon-btn notif" type="button" data-toast="You have 3 new notices (demo)" aria-label="Notifications"><i data-i="bell"></i></button>
+        <span class="avatar av1" aria-hidden="true">AD</span>
+      </header>
+
+      <main class="content" data-filter-scope>
+        <div class="page-title">
+          <div>
+            <h1>Take attendance</h1>
+            <p data-today>Today</p>
+          </div>
+          <div class="actions">
+            <button class="btn btn-ghost" type="button" data-mark-all><i data-i="check"></i> Mark all present</button>
+            <button class="btn btn-primary" type="button" data-save-attendance><i data-i="checksq"></i> Save attendance</button>
+          </div>
+        </div>
+
+        <section class="att-summary" aria-label="Attendance summary" aria-live="polite">
+          <div class="card"><strong data-count-p>0</strong><span>Present</span></div>
+          <div class="card"><strong data-count-a>0</strong><span>Absent</span></div>
+          <div class="card"><strong data-count-l>0</strong><span>Late</span></div>
+          <div class="card"><strong data-count-rate>0%</strong><span>Attendance rate</span></div>
+        </section>
+
+        <section class="panel">
+          <div class="filters">
+            <div class="input-wrap">
+              <i data-i="search" class="ic-left"></i>
+              <label class="sr-only" for="attSearch">Search students</label>
+              <input id="attSearch" class="input has-icon" type="search" placeholder="Search student or course" data-filter-search autocomplete="off">
+            </div>
+            <label class="sr-only" for="attBatch">Filter by batch</label>
+            <select id="attBatch" class="input" data-filter-select="batch">
+              <option value="all">All batches</option>
+              <option value="morning">Morning</option>
+              <option value="evening">Evening</option>
+            </select>
+            <span class="muted" style="margin-left:auto; font-size:.85rem"><strong data-count-total>0</strong> students · P = Present, A = Absent, L = Late</span>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table" data-attendance>
+              <thead><tr><th>Roll</th><th>Student</th><th>Course &amp; batch</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr data-item data-batch="morning"><td>01</td><td><div class="cell-user"><span class="avatar av1">RA</span><strong>Rafiq Ahmed</strong></div></td><td>HSC Physics · Morning</td>
+                  <td><div class="seg" role="radiogroup" aria-label="Attendance for Rafiq Ahmed"><label><input type="radio" name="att-1" value="P" aria-label="Present" checked><span>P</span></label><label><input type="radio" name="att-1" value="A" aria-label="Absent"><span>A</span></label><label><input type="radio" name="att-1" value="L" aria-label="Late"><span>L</span></label></div></td></tr>
+                <tr data-item data-batch="morning"><td>02</td><td><div class="cell-user"><span class="avatar av3">TH</span><strong>Tanjim Hossain</strong></div></td><td>Engineering Admission · Morning</td>
+                  <td><div class="seg" role="radiogroup" aria-label="Attendance for Tanjim Hossain"><label><input type="radio" name="att-2" value="P" aria-label="Present" checked><span>P</span></label><label><input type="radio" name="att-2" value="A" aria-label="Absent"><span>A</span></label><label><input type="radio" name="att-2" value="L" aria-label="Late"><span>L</span></label></div></td></tr>
+                <tr data-item data-batch="evening"><td>03</td><td><div class="cell-user"><span class="avatar av2">SA</span><strong>Sumaiya Akter</strong></div></td><td>SSC Math · Evening</td>
+                  <td><div class="seg" role="radiogroup" aria-label="Attendance for Sumaiya Akter"><label><input type="radio" name="att-3" value="P" aria-label="Present" checked><span>P</span></label><label><input type="radio" name="att-3" value="A" aria-label="Absent"><span>A</span></label><label><input type="radio" name="att-3" value="L" aria-label="Late"><span>L</span></label></div></td></tr>
+                <tr data-item data-batch="evening"><td>04</td><td><div class="cell-user"><span class="avatar av4">MC</span><strong>Mim Chowdhury</strong></div></td><td>Spoken English · Evening</td>
+                  <td><div class="seg" role="radiogroup" aria-label="Attendance for Mim Chowdhury"><label><input type="radio" name="att-4" value="P" aria-label="Present" checked><span>P</span></label><label><input type="radio" name="att-4" value="A" aria-label="Absent"><span>A</span></label><label><input type="radio" name="att-4" value="L" aria-label="Late"><span>L</span></label></div></td></tr>
+                <tr data-item data-batch="evening"><td>05</td><td><div class="cell-user"><span class="avatar av5">IK</span><strong>Imran Khan</strong></div></td><td>HSC Physics · Evening</td>
+                  <td><div class="seg" role="radiogroup" aria-label="Attendance for Imran Khan"><label><input type="radio" name="att-5" value="P" aria-label="Present"><span>P</span></label><label><input type="radio" name="att-5" value="A" aria-label="Absent" checked><span>A</span></label><label><input type="radio" name="att-5" value="L" aria-label="Late"><span>L</span></label></div></td></tr>
+                <tr data-item data-batch="morning"><td>06</td><td><div class="cell-user"><span class="avatar av1">NI</span><strong>Nabila Islam</strong></div></td><td>IELTS Preparation · Morning</td>
+                  <td><div class="seg" role="radiogroup" aria-label="Attendance for Nabila Islam"><label><input type="radio" name="att-6" value="P" aria-label="Present" checked><span>P</span></label><label><input type="radio" name="att-6" value="A" aria-label="Absent"><span>A</span></label><label><input type="radio" name="att-6" value="L" aria-label="Late"><span>L</span></label></div></td></tr>
+                <tr data-item data-batch="evening"><td>07</td><td><div class="cell-user"><span class="avatar av2">AH</span><strong>Arif Hasan</strong></div></td><td>ICT &amp; Programming · Evening</td>
+                  <td><div class="seg" role="radiogroup" aria-label="Attendance for Arif Hasan"><label><input type="radio" name="att-7" value="P" aria-label="Present"><span>P</span></label><label><input type="radio" name="att-7" value="A" aria-label="Absent"><span>A</span></label><label><input type="radio" name="att-7" value="L" aria-label="Late" checked><span>L</span></label></div></td></tr>
+                <tr data-item data-batch="morning"><td>08</td><td><div class="cell-user"><span class="avatar av3">TR</span><strong>Tasnia Rahman</strong></div></td><td>SSC Math · Morning</td>
+                  <td><div class="seg" role="radiogroup" aria-label="Attendance for Tasnia Rahman"><label><input type="radio" name="att-8" value="P" aria-label="Present" checked><span>P</span></label><label><input type="radio" name="att-8" value="A" aria-label="Absent"><span>A</span></label><label><input type="radio" name="att-8" value="L" aria-label="Late"><span>L</span></label></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="empty">
+            <i data-i="users"></i>
+            <h3>No students found</h3>
+            <p>Try a different search or batch.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

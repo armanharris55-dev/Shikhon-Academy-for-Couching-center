@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class schedule — Shikhon Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}})()</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="../index.html" class="brand"><span class="brand-mark"><i data-i="cap"></i></span>Shikhon Academy</a>
+      <div class="side-label">Manage</div>
+      <a class="side-link" href="dashboard.html"><i data-i="grid"></i>Dashboard</a>
+      <a class="side-link" href="students.html"><i data-i="users"></i>Students</a>
+      <a class="side-link" href="attendance.html"><i data-i="checksq"></i>Attendance</a>
+      <a class="side-link is-active" href="schedule.html" aria-current="page"><i data-i="calendar"></i>Class schedule</a>
+      <div class="side-label">Shortcuts</div>
+      <a class="side-link" href="../courses.html"><i data-i="book"></i>Public courses</a>
+      <a class="side-link" href="../student/dashboard.html"><i data-i="cap"></i>Student view</a>
+      <div class="side-foot">
+        <div class="side-user">
+          <span class="avatar av1">AD</span>
+          <div><strong>Admin</strong><span>Administrator</span></div>
+        </div>
+        <a class="side-link" href="../login.html"><i data-i="logout"></i>Log out</a>
+      </div>
+    </aside>
+    <div class="overlay" data-sidebar-close></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" type="button" data-sidebar-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Open menu"><i data-i="menu"></i></button>
+        <div class="spacer"></div>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme"></button>
+        <button class="icon-btn notif" type="button" data-toast="You have 3 new notices (demo)" aria-label="Notifications"><i data-i="bell"></i></button>
+        <span class="avatar av1" aria-hidden="true">AD</span>
+      </header>
+
+      <main class="content">
+        <div class="page-title">
+          <div>
+            <h1>Weekly class schedule</h1>
+            <p>Saturday to Thursday · Friday is off</p>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" type="button" data-toast="Adding classes will work once the backend is connected"><i data-i="plus"></i> Add class</button>
+          </div>
+        </div>
+
+        <section class="panel" aria-label="Weekly routine">
+          <div class="routine-wrap">
+            <div class="routine">
+              <div class="rh">Time</div>
+              <div class="rh" data-day="6">Sat</div>
+              <div class="rh" data-day="0">Sun</div>
+              <div class="rh" data-day="1">Mon</div>
+              <div class="rh" data-day="2">Tue</div>
+              <div class="rh" data-day="3">Wed</div>
+              <div class="rh" data-day="4">Thu</div>
+
+              <!-- 8:00 -->
+              <div class="rt">8:00 – 9:30 AM</div>
+              <div class="rc"><div class="cls" style="--c:#6366f1"><strong>HSC Physics</strong><span>Room 3 · Dr. Farhana</span></div></div>
+              <div class="rc"></div>
+              <div class="rc"><div class="cls" style="--c:#6366f1"><strong>HSC Physics</strong><span>Room 3 · Dr. Farhana</span></div></div>
+              <div class="rc"></div>
+              <div class="rc"><div class="cls" style="--c:#6366f1"><strong>HSC Physics</strong><span>Room 3 · Dr. Farhana</span></div></div>
+              <div class="rc"></div>
+
+              <!-- 10:00 -->
+              <div class="rt">10:00 – 11:30 AM</div>
+              <div class="rc"></div>
+              <div class="rc"><div class="cls" style="--c:#f59e0b"><strong>Admission Math</strong><span>Room 1 · Tanvir</span></div></div>
+              <div class="rc"></div>
+              <div class="rc"><div class="cls" style="--c:#f59e0b"><strong>Admission Math</strong><span>Room 1 · Tanvir</span></div></div>
+              <div class="rc"></div>
+              <div class="rc"><div class="cls" style="--c:#f59e0b"><strong>Admission Math</strong><span>Room 1 · Tanvir</span></div></div>
+
+              <!-- 12:00 -->
+              <div class="rt">12:00 – 1:30 PM</div>
+              <div class="rc"><div class="cls" style="--c:#10b981"><strong>Spoken English</strong><span>Room 2 · Nusrat</span></div></div>
+              <div class="rc"></div>
+              <div class="rc"></div>
+              <div class="rc"><div class="cls" style="--c:#10b981"><strong>Spoken English</strong><span>Room 2 · Nusrat</span></div></div>
+              <div class="rc"></div>
+              <div class="rc"></div>
+
+              <!-- 4:00 -->
+              <div class="rt">4:00 – 5:30 PM</div>
+              <div class="rc"></div>
+              <div class="rc"><div class="cls" style="--c:#6366f1"><strong>HSC Physics</strong><span>Room 3 · Dr. Farhana</span></div></div>
+              <div class="rc"><div class="cls" style="--c:#0ea5e9"><strong>SSC Math</strong><span>Room 1 · Tanvir</span></div></div>
+              <div class="rc"></div>
+              <div class="rc"><div class="cls" style="--c:#0ea5e9"><strong>SSC Math</strong><span>Room 1 · Tanvir</span></div></div>
+              <div class="rc"><div class="cls" style="--c:#6366f1"><strong>HSC Physics</strong><span>Room 3 · Dr. Farhana</span></div></div>
+
+              <!-- 6:00 -->
+              <div class="rt">6:00 – 7:30 PM</div>
+              <div class="rc"><div class="cls" style="--c:#ec4899"><strong>IELTS Prep</strong><span>Room 2 · Nusrat</span></div></div>
+              <div class="rc"><div class="cls" style="--c:#64748b"><strong>ICT Basics</strong><span>Lab · Mahmudul</span></div></div>
+              <div class="rc"><div class="cls" style="--c:#ec4899"><strong>IELTS Prep</strong><span>Room 2 · Nusrat</span></div></div>
+              <div class="rc"><div class="cls" style="--c:#0ea5e9"><strong>SSC Math</strong><span>Room 1 · Tanvir</span></div></div>
+              <div class="rc"><div class="cls" style="--c:#64748b"><strong>ICT Basics</strong><span>Lab · Mahmudul</span></div></div>
+              <div class="rc"></div>
+            </div>
+          </div>
+
+          <div class="legend" aria-label="Course colours">
+            <span><i style="--c:#6366f1"></i>HSC Physics</span>
+            <span><i style="--c:#0ea5e9"></i>SSC Math</span>
+            <span><i style="--c:#f59e0b"></i>Admission</span>
+            <span><i style="--c:#10b981"></i>Spoken English</span>
+            <span><i style="--c:#ec4899"></i>IELTS</span>
+            <span><i style="--c:#64748b"></i>ICT</span>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
